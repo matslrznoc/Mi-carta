@@ -1,0 +1,94 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💌 Carta para Jean Carlos 💌</title>
+    <style>
+        body {
+            background-color: #cce7ff; /* Fondo azul claro */
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+        .contenedor {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            margin-top: 50px;
+        }
+        .sobre {
+            width: 250px;
+            height: 150px;
+            background: #4a90e2; /* Azul brillante */
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s;
+        }
+        .tapa {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #357ABD; /* Azul más oscuro */
+            clip-path: polygon(0 0, 100% 0, 50% 50%);
+            transition: transform 0.5s ease-in-out;
+        }
+        .carta {
+            width: 230px;
+            height: auto;
+            background: #f0f8ff; /* Azul muy claro */
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(100%);
+            opacity: 0;
+            transition: transform 0.5s ease-in-out, opacity 0.5s;
+        }
+        .carta p {
+            font-size: 16px;
+            color: #2c3e50; /* Azul oscuro */
+            text-align: left;
+        }
+        .contenedor.abierto .tapa {
+            transform: rotateX(180deg);
+        }
+        .contenedor.abierto .carta {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="color: #2c3e50;">💙 Da clic en el sobre para abrir tu carta 💙</h1>
+
+    <div class="contenedor" onclick="abrirCarta()">
+        <div class="sobre">
+            <div class="tapa"></div>
+        </div>
+        <div class="carta">
+            <p><strong>Querido Jean Carlos,</strong></p>
+            <p>Cuando te conocí no tenía ni idea del tipo de chico que había conocido, fue una situación de pasito a pasito de tortuga poder conocerte y sé que aún me falta mucho.</p>
+            <p>¿Piensas que no me interesas? Jaja, bobo, no sabes la emoción que genera en mí ver una notificación tuya o ver que te gustó una foto que subí. Es algo muy lindo en serio y me gusta porque viene de ti.</p>
+            <p>Sé que hay muchas cosas que aún no me dejas decirte, pero considero necesario que sepas que no te quiero menos por no reaccionar siempre, no te quiero menos por no escribirte todo el tiempo, no te quiero menos por no ser igual que el primer día.</p>
+            <p>Solo intento comprenderte porque me interesas y sé tus prioridades, sé tus metas y sé que pasas constantemente ocupado, por lo tanto, intento no molestarte. Créeme que desde mi silencio te apoyo y te doy mis mejores energías siempre porque quiero que llegues lejos.</p>
+            <p>No sabes la alegría que me da cuando te felicitan o elogian tus méritos, porque yo también lo hago. No pretendo ser la gran cosa en tu vida, solo quiero que me permitas quererte y que tú quieras que yo me quede.</p>
+            <p>No es solo decisión mía, debe ser también un deseo tuyo. Te admiro mucho y, desde anoche cuando me dijiste todo eso, no he dejado de pensarlo porque no quiero que sientas eso de mí o por mí.</p>
+            <p>Eres importante en mi vida. Siento no habértelo hecho saber o sentir antes, pero es la verdad. Es mi verdad y necesito que lo sepas, incluso si no estoy al 100%...</p>
+            <p><strong>Te quiero a ti. 🫶🏻</strong></p>
+        </div>
+    </div>
+
+    <script>
+        function abrirCarta() {
+            document.querySelector('.contenedor').classList.toggle('abierto');
+        }
+    </script>
+
+</body>
+</html>
